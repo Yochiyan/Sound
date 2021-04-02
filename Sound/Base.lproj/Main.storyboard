@@ -15,24 +15,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hno-fn-GAG">
-                                <rect key="frame" x="107" y="348" width="200" height="200"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hno-fn-GAG">
+                                <rect key="frame" x="107" y="82" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="drumImage"/>
                                 <connections>
                                     <action selector="TouchDownDrumdrumtap" destination="BYZ-38-t0r" eventType="touchDown" id="uH6-B8-iBA"/>
                                     <action selector="touchUpDrumButtn" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xgv-fz-Je1"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Zx-ig-x5X">
+                                <rect key="frame" x="107" y="348" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="pianoImage"/>
+                                <connections>
+                                    <action selector="touchDownPianotap" destination="BYZ-38-t0r" eventType="touchDown" id="WAo-5V-OPH"/>
+                                    <action selector="touchUPpianoButtn" destination="BYZ-38-t0r" eventType="touchUpInside" id="vhh-fw-Aj2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnm-KK-VdR">
+                                <rect key="frame" x="107" y="577" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="guitarImage"/>
+                                <connections>
+                                    <action selector="TouchDownGuitartap" destination="BYZ-38-t0r" eventType="touchDown" id="L77-vF-6xT"/>
+                                    <action selector="touchUpGuitarButtn" destination="BYZ-38-t0r" eventType="touchUpInside" id="tjr-4g-yLR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.066666666666666666" green="0.066666666666666666" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="hno-fn-GAG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1ZI-wu-GKP"/>
-                            <constraint firstItem="hno-fn-GAG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZNb-Iy-Ae7"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="drumButton" destination="hno-fn-GAG" id="qb9-ed-K7O"/>
+                        <outlet property="guitarButton" destination="cnm-KK-VdR" id="aLg-ve-o1M"/>
+                        <outlet property="pianoButton" destination="3Zx-ig-x5X" id="tv3-FC-u9E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -42,5 +59,7 @@
     </scenes>
     <resources>
         <image name="drumImage" width="200" height="200"/>
+        <image name="guitarImage" width="200" height="200"/>
+        <image name="pianoImage" width="200" height="200"/>
     </resources>
 </document>
