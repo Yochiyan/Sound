@@ -9,6 +9,8 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController {
+    @IBOutlet var drumButton: UIButton!
+    
     //SoundFile read
     let drumSoundPlayer = try! AVAudioPlayer(data: NSDataAsset(name: "drumSound")!.data)
 
@@ -16,10 +18,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    @IBAction func drumtap() {
+    @IBAction func TouchDownDrumdrumtap() {
+        drumButton.setImage(UIImage(named: "drumPlayingImage"),for: .normal)
         drumSoundPlayer.currentTime = 0
         drumSoundPlayer.play()
-    
+}
+    @IBAction func touchUpDrumButtn() {
+        drumButton.setImage(UIImage(named: "drumImage"), for: .normal)
     }
 }
 
