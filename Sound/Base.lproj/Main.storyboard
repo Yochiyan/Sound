@@ -15,36 +15,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hno-fn-GAG">
-                                <rect key="frame" x="107" y="82" width="200" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="drumImage"/>
-                                <connections>
-                                    <action selector="TouchDownDrumdrumtap" destination="BYZ-38-t0r" eventType="touchDown" id="uH6-B8-iBA"/>
-                                    <action selector="touchUpDrumButtn" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xgv-fz-Je1"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Zx-ig-x5X">
-                                <rect key="frame" x="107" y="348" width="200" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="pianoImage"/>
-                                <connections>
-                                    <action selector="touchDownPianotap" destination="BYZ-38-t0r" eventType="touchDown" id="WAo-5V-OPH"/>
-                                    <action selector="touchUPpianoButtn" destination="BYZ-38-t0r" eventType="touchUpInside" id="vhh-fw-Aj2"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnm-KK-VdR">
-                                <rect key="frame" x="107" y="577" width="200" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="guitarImage"/>
-                                <connections>
-                                    <action selector="TouchDownGuitartap" destination="BYZ-38-t0r" eventType="touchDown" id="L77-vF-6xT"/>
-                                    <action selector="touchUpGuitarButtn" destination="BYZ-38-t0r" eventType="touchUpInside" id="tjr-4g-yLR"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2Xn-vr-avk">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hno-fn-GAG">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="284"/>
+                                        <state key="normal" image="drumImage"/>
+                                        <connections>
+                                            <action selector="TouchDownDrumdrumtap" destination="BYZ-38-t0r" eventType="touchDown" id="uH6-B8-iBA"/>
+                                            <action selector="touchUpDrumButtn" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xgv-fz-Je1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Zx-ig-x5X">
+                                        <rect key="frame" x="0.0" y="284" width="414" height="284"/>
+                                        <state key="normal" image="pianoImage"/>
+                                        <connections>
+                                            <action selector="touchDownPianotap" destination="BYZ-38-t0r" eventType="touchDown" id="WAo-5V-OPH"/>
+                                            <action selector="touchUPpianoButtn" destination="BYZ-38-t0r" eventType="touchUpInside" id="vhh-fw-Aj2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnm-KK-VdR">
+                                        <rect key="frame" x="0.0" y="568" width="414" height="284"/>
+                                        <state key="normal" image="guitarImage"/>
+                                        <connections>
+                                            <action selector="TouchDownGuitartap" destination="BYZ-38-t0r" eventType="touchDown" id="L77-vF-6xT"/>
+                                            <action selector="touchUpGuitarButtn" destination="BYZ-38-t0r" eventType="touchUpInside" id="tjr-4g-yLR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.066666666666666666" green="0.066666666666666666" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Xn-vr-avk" secondAttribute="trailing" id="LrP-A7-slu"/>
+                            <constraint firstItem="2Xn-vr-avk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TXv-3R-bn1"/>
+                            <constraint firstItem="2Xn-vr-avk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rPg-AM-CPp"/>
+                            <constraint firstAttribute="bottom" secondItem="2Xn-vr-avk" secondAttribute="bottom" id="z4E-TP-Hnx"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="drumButton" destination="hno-fn-GAG" id="qb9-ed-K7O"/>
